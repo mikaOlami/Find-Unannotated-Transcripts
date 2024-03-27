@@ -36,7 +36,7 @@ Scripts for detecting unannotated transcripts from an RNA-seq library using a co
 2. Ensure all dependencies are installed:
    - bedtools
    - prinseq-lite
-3. Run `find_unannotated_transcripts.sh` with appropriate parameters to initiate the pipeline.
+3. Run `find_unannotated_transcripts.sh` <bam file> <known genes annotations bed file> [max reads (default: 100)] [max gaps (default: 10)]
 4. Further analysis can be performed on the resulting unannotated transcripts using tools like CPC2, LncFinder, etc.
 
 ## Requirements
