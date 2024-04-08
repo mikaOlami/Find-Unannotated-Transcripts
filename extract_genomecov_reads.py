@@ -17,9 +17,10 @@ def extract_coverage(genomecov_file, bed_file):
     # Read the bed file and print the coverage for each nucleotide
     with open(bed_file, "r") as bed_coordinates:
         for line in bed_coordinates:
-            chrom, start, end = line.strip().split("\t")
-            start = int(start)
-            end = int(end)
+            line = line.strip().split("\t")
+            chrom = line[0]
+            start = int(line[1])
+            end = int(line[2]) 
 
             # Print coverage for each nucleotide in the specified range
             for pos in range(start, end + 1):
